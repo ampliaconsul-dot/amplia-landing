@@ -21,11 +21,11 @@ export const site = {
     role: "Directora General",
   },
   contact: {
-    // TODO: reemplazar con los datos reales
-    email: "contacto@amplia-consultoria.mx",
-    phone: "+52 662 000 0000",
-    phoneHref: "tel:+526620000000",
-    whatsappHref: "https://wa.me/526620000000",
+    email: "ampliaconsul@gmail.com",
+    phone: "662 205 5021",
+    phoneHref: "tel:+526622055021",
+    whatsappHref: "https://wa.me/526622055021",
+    // TODO: confirmar dirección y horario
     address: "Hermosillo, Sonora, México",
     hours: "Lunes a viernes, 9:00 a 18:00 h",
   },

@@ -45,7 +45,7 @@ const jsonLd = {
   description: site.description,
   url: site.url,
   email: site.contact.email,
-  telephone: site.contact.phone,
+  telephone: "+52 662 205 5021",
   areaServed: { "@type": "State", name: "Sonora" },
   address: { "@type": "PostalAddress", addressRegion: "Sonora", addressCountry: "MX" },
   founder: { "@type": "Person", name: site.leader.name },

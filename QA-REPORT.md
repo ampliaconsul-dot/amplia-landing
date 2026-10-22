@@ -53,6 +53,6 @@ Métricas móviles (Lighthouse, 4G simulado): FCP 0.9 s · LCP 2.6 s · TBT 110 
 **Pendiente de producción:** el envío real con Resend se valida al configurar `RESEND_API_KEY` y el dominio (ver `DEPLOY.md`), porque este entorno no tiene credenciales.
 
 ## Pendientes de contenido
-1. Datos reales en `src/content/site.ts`: teléfono, WhatsApp, correo público, dirección y horario (hoy son marcadores `TODO`).
+1. Confirmar dirección y horario en `src/content/site.ts` (correo ampliaconsul@gmail.com y teléfono/WhatsApp 662 205 5021 ya actualizados).
 2. Fotos originales en alta resolución: las actuales se recortaron de la presentación (calidad limitada). Basta con reemplazar `public/images/*.webp`.
 3. Revisión legal del aviso de privacidad simplificado (footer) y, si aplica, enlace al aviso integral.
