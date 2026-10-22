@@ -168,6 +168,22 @@ await page.getByRole("button", { name: /Enviar solicitud/ }).click();
 await page.getByText("El formulario no está disponible en este momento.").waitFor({ timeout: 5000 });
 check("Formulario: error del servidor muestra fallback (correo/WhatsApp)", await page.getByRole("alert").getByText("WhatsApp").isVisible());
 
+// 6. Movimiento reducido: todo visible sin animaciones
+const rctx = await browser.newContext({ viewport: { width: 1440, height: 900 }, reducedMotion: "reduce" });
+const rpage = await rctx.newPage();
+await rpage.goto(BASE, { waitUntil: "networkidle" });
+await rpage.waitForTimeout(300);
+const reduced = await rpage.evaluate(() => {
+  const hidden = [...document.querySelectorAll(".reveal, .animate-enter")].filter(
+    (el) => parseFloat(getComputedStyle(el).opacity) < 0.99,
+  ).length;
+  const running = document.getAnimations().filter((a) => a.playState === "running").length;
+  return { hidden, running };
+});
+check("prefers-reduced-motion: contenido visible", reduced.hidden === 0, `${reduced.hidden} ocultos`);
+check("prefers-reduced-motion: sin animaciones en curso", reduced.running === 0, `${reduced.running} en curso`);
+await rctx.close();
+
 await browser.close();
 writeFileSync(new URL("./results.json", import.meta.url), JSON.stringify(results, null, 2));
 const failed = results.filter((r) => !r.ok);

@@ -8,8 +8,13 @@ export function CtaBand() {
     <section aria-labelledby="cta-title" className="bg-white pb-20 md:pb-28">
       <div className="container-page">
         <div className="bg-brand on-dark relative overflow-hidden rounded-[2rem] px-7 py-14 text-white shadow-lift md:px-16 md:py-16">
+          <span
+            aria-hidden
+            className="animate-drift pointer-events-none absolute -top-1/2 -right-1/4 size-[36rem] rounded-full bg-teal-400/25 blur-3xl"
+          />
           <BrushRing
             id="cta"
+            animated
             tone="light"
             strokeWidth={18}
             className="pointer-events-none absolute -right-16 -bottom-24 w-[22rem] opacity-30"

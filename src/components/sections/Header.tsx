@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { Menu, X } from "lucide-react";
 import { Logo } from "@/components/ui/Logo";
 import { ButtonLink } from "@/components/ui/Button";
@@ -9,12 +9,28 @@ import { nav, hero } from "@/content/site";
 export function Header() {
   const [scrolled, setScrolled] = useState(false);
   const [open, setOpen] = useState(false);
+  const progressRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
-    const onScroll = () => setScrolled(window.scrollY > 24);
-    onScroll();
+    let frame = 0;
+    const update = () => {
+      frame = 0;
+      const y = window.scrollY;
+      setScrolled(y > 24);
+      const max = document.documentElement.scrollHeight - window.innerHeight;
+      if (progressRef.current) progressRef.current.style.transform = `scaleX(${max > 0 ? y / max : 0})`;
+    };
+    const onScroll = () => {
+      if (!frame) frame = requestAnimationFrame(update);
+    };
+    update();
     window.addEventListener("scroll", onScroll, { passive: true });
-    return () => window.removeEventListener("scroll", onScroll);
+    window.addEventListener("resize", onScroll);
+    return () => {
+      cancelAnimationFrame(frame);
+      window.removeEventListener("scroll", onScroll);
+      window.removeEventListener("resize", onScroll);
+    };
   }, []);
 
   useEffect(() => {
@@ -36,7 +52,17 @@ export function Header() {
         solid ? "border-b border-line bg-white/90 shadow-soft backdrop-blur-xl" : "bg-transparent"
       }`}
     >
-      <div className="container-page flex h-18 items-center justify-between gap-6">
+      {/* Barra de progreso de lectura */}
+      <div
+        ref={progressRef}
+        aria-hidden
+        className="bg-brand absolute inset-x-0 bottom-0 h-0.5 origin-left scale-x-0"
+      />
+      <div
+        className={`container-page flex items-center justify-between gap-6 transition-[height] duration-300 ${
+          scrolled ? "h-15" : "h-18"
+        }`}
+      >
         <Logo id="header-logo" />
 
         <nav aria-label="Principal" className="hidden md:block">

@@ -7,8 +7,8 @@ Fecha: 2026-10-22 · Build de producción (`next build` + `next start`) · Chrom
 | Área | Resultado |
 | --- | --- |
 | Build / TypeScript / ESLint | ✅ Sin errores ni advertencias |
-| QA automatizado (`qa/qa.mjs`) | ✅ **29/29** verificaciones |
-| Lighthouse móvil | Rendimiento **96** · Accesibilidad **100** · Buenas prácticas **100** · SEO **100** |
+| QA automatizado (`qa/qa.mjs`) | ✅ **31/31** verificaciones (incluye `prefers-reduced-motion`) |
+| Lighthouse móvil | Rendimiento **96–97** · Accesibilidad **100** · Buenas prácticas **100** · SEO **100** |
 | Lighthouse escritorio | Rendimiento **100** (LCP 0.6 s) |
 | `npm audit --omit=dev` | ✅ 0 vulnerabilidades |
 
@@ -24,7 +24,7 @@ Métricas móviles (Lighthouse, 4G simulado): FCP 0.9 s · LCP 2.6 s · TBT 110 
 - Enlace "Saltar al contenido" como primer foco; foco visible en todos los elementos interactivos.
 - Imágenes con `alt` descriptivo; iconos decorativos con `aria-hidden`.
 - Formulario: `label` asociado a cada campo, `aria-invalid` + `aria-describedby` por error, foco al primer campo con error, región `role="alert"` para estados, honeypot fuera del árbol accesible.
-- Animaciones respetan `prefers-reduced-motion`; sin JS el contenido se ve completo.
+- Animaciones (anillo que se dibuja y gira, entradas escalonadas, tarjetas flotantes, marquee, apariciones al hacer scroll) usan solo `transform`/`opacity` y se desactivan con `prefers-reduced-motion` (verificado: 0 elementos ocultos y 0 animaciones en curso). Sin JS el contenido se ve completo.
 
 ## SEO
 - `<title>` 55 car., meta description 147 car., `lang="es-MX"`, canonical, Open Graph + imagen OG generada, Twitter card.
@@ -54,5 +54,5 @@ Métricas móviles (Lighthouse, 4G simulado): FCP 0.9 s · LCP 2.6 s · TBT 110 
 
 ## Pendientes de contenido
 1. Confirmar dirección y horario en `src/content/site.ts` (correo ampliaconsul@gmail.com y teléfono/WhatsApp 662 205 5021 ya actualizados).
-2. Fotos originales en alta resolución: las actuales se recortaron de la presentación (calidad limitada). Basta con reemplazar `public/images/*.webp`.
+2. Foto del equipo en alta resolución: la actual se recortó de la presentación (calidad limitada). Basta con reemplazar `public/images/equipo-amplia.webp`. La foto de la Lic. Fabiola se retiró del sitio a petición.
 3. Revisión legal del aviso de privacidad simplificado (footer) y, si aplica, enlace al aviso integral.

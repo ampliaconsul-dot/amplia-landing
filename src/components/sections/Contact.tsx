@@ -15,8 +15,13 @@ export function Contact() {
 
   return (
     <section id="contacto" aria-labelledby="contacto-title" className="bg-brand on-dark relative overflow-hidden py-20 text-white md:py-28">
+      <span
+        aria-hidden
+        className="animate-drift pointer-events-none absolute -right-40 -bottom-40 size-[40rem] rounded-full bg-teal-400/20 blur-3xl"
+      />
       <BrushRing
         id="contact"
+        animated
         tone="light"
         strokeWidth={16}
         className="pointer-events-none absolute -top-32 -left-40 w-[30rem] opacity-15"

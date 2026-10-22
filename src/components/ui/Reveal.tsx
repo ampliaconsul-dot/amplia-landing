@@ -2,8 +2,10 @@
 
 import { useEffect, useRef, type ReactNode } from "react";
 
+type Variant = "up" | "left" | "right" | "scale" | "line";
+
 /**
- * Aparición suave al entrar en pantalla (IntersectionObserver + CSS).
+ * Aparición al entrar en pantalla (IntersectionObserver + CSS).
  * Sin JavaScript o con prefers-reduced-motion el contenido se muestra directamente.
  */
 export function Reveal({
@@ -11,11 +13,13 @@ export function Reveal({
   delay = 0,
   className = "",
   as: Tag = "div",
+  variant = "up",
 }: {
-  children: ReactNode;
+  children?: ReactNode;
   delay?: number;
   className?: string;
-  as?: "div" | "li";
+  as?: "div" | "li" | "span";
+  variant?: Variant;
 }) {
   const ref = useRef<HTMLElement>(null);
 
@@ -37,7 +41,8 @@ export function Reveal({
 
   return (
     <Tag
-      ref={ref as React.Ref<HTMLDivElement & HTMLLIElement>}
+      ref={ref as React.Ref<HTMLDivElement & HTMLLIElement & HTMLSpanElement>}
+      data-variant={variant === "up" ? undefined : variant}
       className={`reveal ${className}`}
       style={delay ? { transitionDelay: `${delay}s` } : undefined}
     >

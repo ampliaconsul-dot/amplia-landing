@@ -19,10 +19,10 @@ export function Difference() {
         {difference.items.map((item, i) => {
           const Icon = icons[i % icons.length];
           return (
-            <Reveal as="li" key={item.title} delay={(i % 3) * 0.06}>
+            <Reveal as="li" key={item.title} delay={(i % 3) * 0.1} variant="scale">
               <div className="group flex h-full items-start gap-4 rounded-3xl border border-line bg-white p-7 transition-all duration-300 hover:-translate-y-1 hover:border-teal-400/50 hover:shadow-soft">
                 <span className="inline-flex size-12 shrink-0 items-center justify-center rounded-2xl bg-mint-soft text-teal-700 transition-colors duration-300 group-hover:bg-teal-600 group-hover:text-white">
-                  <Icon className="size-6" strokeWidth={1.7} aria-hidden />
+                  <Icon className="size-6 group-hover:animate-wiggle" strokeWidth={1.7} aria-hidden />
                 </span>
                 <div className="flex flex-col gap-1.5">
                   <h3 className="font-display text-base font-bold tracking-tight">{item.title}</h3>

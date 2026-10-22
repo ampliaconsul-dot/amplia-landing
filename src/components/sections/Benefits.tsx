@@ -10,9 +10,9 @@ export function Benefits() {
       <SectionHeading id="beneficios-title" eyebrow="Beneficios" title={benefits.title} subtitle={benefits.subtitle} />
       <ul className="mt-14 grid gap-x-8 gap-y-10 sm:grid-cols-2 lg:grid-cols-4">
         {benefits.items.map((b, i) => (
-          <Reveal as="li" key={b.title} delay={i * 0.06}>
-            <div className="flex gap-4">
-              <span className="bg-brand inline-flex size-8 shrink-0 items-center justify-center rounded-full text-white shadow-soft">
+          <Reveal as="li" key={b.title} delay={i * 0.1} variant={i % 2 ? "right" : "left"}>
+            <div className="group flex gap-4">
+              <span className="bg-brand inline-flex size-8 shrink-0 items-center justify-center rounded-full text-white shadow-soft transition-transform duration-300 group-hover:scale-110 group-hover:rotate-12">
                 <Check className="size-4" strokeWidth={3} aria-hidden />
               </span>
               <div className="flex flex-col gap-1.5">

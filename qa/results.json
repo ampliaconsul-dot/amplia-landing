@@ -143,5 +143,15 @@
     "name": "Formulario: error del servidor muestra fallback (correo/WhatsApp)",
     "ok": true,
     "detail": ""
+  },
+  {
+    "name": "prefers-reduced-motion: contenido visible",
+    "ok": true,
+    "detail": "0 ocultos"
+  },
+  {
+    "name": "prefers-reduced-motion: sin animaciones en curso",
+    "ok": true,
+    "detail": "0 en curso"
   }
 ]
