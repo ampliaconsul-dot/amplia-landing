@@ -1,0 +1,147 @@
+[
+  {
+    "name": "[mobile] sin scroll horizontal",
+    "ok": true,
+    "detail": "exceso=0px"
+  },
+  {
+    "name": "[mobile] sin errores de consola",
+    "ok": true,
+    "detail": ""
+  },
+  {
+    "name": "[mobile] menú móvil abre",
+    "ok": true,
+    "detail": ""
+  },
+  {
+    "name": "[mobile] menú cierra con Escape",
+    "ok": true,
+    "detail": ""
+  },
+  {
+    "name": "[tablet] sin scroll horizontal",
+    "ok": true,
+    "detail": "exceso=0px"
+  },
+  {
+    "name": "[tablet] sin errores de consola",
+    "ok": true,
+    "detail": ""
+  },
+  {
+    "name": "[desktop] sin scroll horizontal",
+    "ok": true,
+    "detail": "exceso=0px"
+  },
+  {
+    "name": "[desktop] sin errores de consola",
+    "ok": true,
+    "detail": ""
+  },
+  {
+    "name": "axe WCAG 2.1 AA: sin violaciones serias/críticas",
+    "ok": true,
+    "detail": "0 violaciones"
+  },
+  {
+    "name": "SEO: <title> presente (≤70)",
+    "ok": true,
+    "detail": "56 car."
+  },
+  {
+    "name": "SEO: meta description (120–170)",
+    "ok": true,
+    "detail": "147 car."
+  },
+  {
+    "name": "SEO: un solo H1",
+    "ok": true,
+    "detail": ""
+  },
+  {
+    "name": "SEO: lang es-MX",
+    "ok": true,
+    "detail": ""
+  },
+  {
+    "name": "SEO: Open Graph image",
+    "ok": true,
+    "detail": ""
+  },
+  {
+    "name": "SEO: canonical",
+    "ok": true,
+    "detail": "https://amplia-landing.vercel.app/"
+  },
+  {
+    "name": "SEO: JSON-LD",
+    "ok": true,
+    "detail": ""
+  },
+  {
+    "name": "Encabezados sin saltos de nivel",
+    "ok": true,
+    "detail": "123333332333323333223333332222"
+  },
+  {
+    "name": "Todas las imágenes con alt",
+    "ok": true,
+    "detail": ""
+  },
+  {
+    "name": "Anclas internas con destino válido",
+    "ok": true,
+    "detail": ""
+  },
+  {
+    "name": "GET /robots.txt → 200",
+    "ok": true,
+    "detail": "200"
+  },
+  {
+    "name": "GET /sitemap.xml → 200",
+    "ok": true,
+    "detail": "200"
+  },
+  {
+    "name": "GET /opengraph-image → 200",
+    "ok": true,
+    "detail": "200"
+  },
+  {
+    "name": "Teclado: primer foco es 'Saltar al contenido'",
+    "ok": true,
+    "detail": "Saltar al contenido"
+  },
+  {
+    "name": "Teclado: foco visible en elementos interactivos",
+    "ok": true,
+    "detail": "39/40"
+  },
+  {
+    "name": "Formulario: validación muestra errores por campo",
+    "ok": true,
+    "detail": "5 campos inválidos"
+  },
+  {
+    "name": "Formulario: foco al primer campo con error",
+    "ok": true,
+    "detail": "f-name"
+  },
+  {
+    "name": "Formulario: envío exitoso muestra confirmación",
+    "ok": true,
+    "detail": ""
+  },
+  {
+    "name": "Formulario: payload correcto",
+    "ok": true,
+    "detail": ""
+  },
+  {
+    "name": "Formulario: error del servidor muestra fallback (correo/WhatsApp)",
+    "ok": true,
+    "detail": ""
+  }
+]

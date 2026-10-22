@@ -1,0 +1,31 @@
+PASS  [mobile] sin scroll horizontal  — exceso=0px
+PASS  [mobile] sin errores de consola
+PASS  [mobile] menú móvil abre
+PASS  [mobile] menú cierra con Escape
+PASS  [tablet] sin scroll horizontal  — exceso=0px
+PASS  [tablet] sin errores de consola
+PASS  [desktop] sin scroll horizontal  — exceso=0px
+PASS  [desktop] sin errores de consola
+PASS  axe WCAG 2.1 AA: sin violaciones serias/críticas  — 0 violaciones
+PASS  SEO: <title> presente (≤70)  — 56 car.
+PASS  SEO: meta description (120–170)  — 147 car.
+PASS  SEO: un solo H1
+PASS  SEO: lang es-MX
+PASS  SEO: Open Graph image
+PASS  SEO: canonical  — https://amplia-landing.vercel.app/
+PASS  SEO: JSON-LD
+PASS  Encabezados sin saltos de nivel  — 123333332333323333223333332222
+PASS  Todas las imágenes con alt
+PASS  Anclas internas con destino válido
+PASS  GET /robots.txt → 200  — 200
+PASS  GET /sitemap.xml → 200  — 200
+PASS  GET /opengraph-image → 200  — 200
+PASS  Teclado: primer foco es 'Saltar al contenido'  — Saltar al contenido
+PASS  Teclado: foco visible en elementos interactivos  — 39/40
+PASS  Formulario: validación muestra errores por campo  — 5 campos inválidos
+PASS  Formulario: foco al primer campo con error  — f-name
+PASS  Formulario: envío exitoso muestra confirmación
+PASS  Formulario: payload correcto
+PASS  Formulario: error del servidor muestra fallback (correo/WhatsApp)
+
+29/29 verificaciones OK
