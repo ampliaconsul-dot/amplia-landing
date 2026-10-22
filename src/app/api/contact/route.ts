@@ -58,7 +58,10 @@ export async function POST(request: Request) {
     );
   }
 
-  const { RESEND_API_KEY, CONTACT_TO_EMAIL, CONTACT_FROM_EMAIL } = process.env;
+  // trim(): tolera espacios o saltos de línea pegados por accidente al definir las variables
+  const RESEND_API_KEY = process.env.RESEND_API_KEY?.trim();
+  const CONTACT_TO_EMAIL = process.env.CONTACT_TO_EMAIL?.trim();
+  const CONTACT_FROM_EMAIL = process.env.CONTACT_FROM_EMAIL?.trim();
   if (!RESEND_API_KEY || !CONTACT_TO_EMAIL || !CONTACT_FROM_EMAIL) {
     console.error("[contact] Faltan variables de entorno RESEND_API_KEY / CONTACT_TO_EMAIL / CONTACT_FROM_EMAIL");
     return json(
