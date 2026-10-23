@@ -10,7 +10,7 @@ type Status = "idle" | "submitting" | "success" | "error";
 type Errors = Partial<Record<ContactField, string>>;
 
 const inputCls =
-  "w-full rounded-xl border border-line bg-white px-4 py-3 text-[0.95rem] text-ink placeholder:text-muted/70 transition-colors outline-none hover:border-teal-400/60 focus:border-teal-600 focus:ring-4 focus:ring-teal-600/10 aria-[invalid=true]:border-red-600 aria-[invalid=true]:ring-red-600/10";
+  "w-full rounded-xl border border-line bg-white px-4 py-3 text-[0.95rem] text-ink placeholder:text-muted/70 transition-colors outline-none hover:border-green-400/60 focus:border-green-600 focus:ring-4 focus:ring-green-600/10 aria-[invalid=true]:border-red-600 aria-[invalid=true]:ring-red-600/10";
 
 function Field({
   name,
@@ -30,7 +30,7 @@ function Field({
       <label htmlFor={`f-${name}`} className="text-sm font-medium text-ink">
         {label}
         {required ? (
-          <span className="text-teal-700" aria-hidden>
+          <span className="text-green-700" aria-hidden>
             {" "}*
           </span>
         ) : (
@@ -114,7 +114,7 @@ export function ContactForm() {
   if (status === "success") {
     return (
       <div role="status" className="flex flex-col items-start gap-4 rounded-3xl bg-white p-8 shadow-lift md:p-10">
-        <CheckCircle2 className="size-10 text-teal-700" aria-hidden />
+        <CheckCircle2 className="size-10 text-green-700" aria-hidden />
         <h3 className="font-display text-2xl font-bold">¡Gracias! Recibimos tu mensaje.</h3>
         <p className="text-muted">Nuestro equipo te contactará en un máximo de un día hábil.</p>
         <Button variant="secondary" onClick={() => setStatus("idle")}>
@@ -168,11 +168,11 @@ export function ContactForm() {
           <input
             {...a11y("consent")}
             type="checkbox"
-            className="mt-0.5 size-5 shrink-0 accent-teal-700"
+            className="mt-0.5 size-5 shrink-0 accent-green-700"
           />
           <span>
             Acepto el tratamiento de mis datos conforme al{" "}
-            <a href="#aviso-privacidad" className="font-medium text-teal-700 underline underline-offset-2 hover:text-teal-900">
+            <a href="#aviso-privacidad" className="font-medium text-green-700 underline underline-offset-2 hover:text-green-900">
               aviso de privacidad
             </a>
             .
@@ -199,7 +199,7 @@ export function ContactForm() {
           )}
         </Button>
         <p className="text-xs text-muted">
-          <span aria-hidden className="text-teal-700">*</span> Campos obligatorios
+          <span aria-hidden className="text-green-700">*</span> Campos obligatorios
         </p>
       </div>
 

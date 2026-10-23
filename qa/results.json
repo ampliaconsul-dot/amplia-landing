@@ -82,7 +82,7 @@
   {
     "name": "Encabezados sin saltos de nivel",
     "ok": true,
-    "detail": "123333332333323333223333332222"
+    "detail": "1233333323333233332223333332222"
   },
   {
     "name": "Todas las imágenes con alt",
@@ -108,6 +108,36 @@
     "name": "GET /opengraph-image → 200",
     "ok": true,
     "detail": "200"
+  },
+  {
+    "name": "Ciclo de consultoría presente con 4 etapas",
+    "ok": true,
+    "detail": ""
+  },
+  {
+    "name": "Ciclo: clic en una etapa la activa",
+    "ok": true,
+    "detail": ""
+  },
+  {
+    "name": "Ciclo: avanza solo",
+    "ok": true,
+    "detail": "Etapa 3: Seguimiento → Etapa 4: Transparencia"
+  },
+  {
+    "name": "Dona con descripción accesible",
+    "ok": true,
+    "detail": ""
+  },
+  {
+    "name": "Mapa de Sonora con 26 pines",
+    "ok": true,
+    "detail": ""
+  },
+  {
+    "name": "Sin fotografías de personas (0 <img>)",
+    "ok": true,
+    "detail": "0 img"
   },
   {
     "name": "Teclado: primer foco es 'Saltar al contenido'",

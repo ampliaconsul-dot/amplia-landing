@@ -1,34 +1,33 @@
 @import "tailwindcss";
 
 /*
- * Design tokens — identidad Amplía (teal profundo + menta) en versión clara,
- * combinando el mockup de Amplía (fondo menta luminoso, anillo de pincel)
- * con la referencia de tarjetas en gradiente teal → petróleo.
+ * Paleta "Premium Editorial": fondo #FAFAFA, verde oscuro #2C4F4A y dorado #D4AF37.
+ * El dorado puro es decorativo; para texto se usan gold-ink (sobre claro) y gold-light (sobre verde).
  */
 @theme {
-  --color-ink: #0e1a1c;
-  --color-ink-soft: #24312f;
-  --color-muted: #4f5d5b;
-  --color-teal-950: #082826;
-  --color-teal-900: #0f3d3a;
-  --color-teal-800: #145a55;
-  --color-teal-700: #1a6b66;
-  --color-teal-600: #1f7c75;
-  --color-teal-500: #2a978d;
-  --color-teal-400: #3fa79b;
-  --color-petrol: #12485a;
-  --color-ocean: #0f3b57;
-  --color-mint: #a8e0d6;
-  --color-mint-soft: #e7f5f2;
-  --color-mist: #f1f7f6;
-  --color-paper: #ffffff;
-  --color-line: #dde7e5;
+  --color-ink: #1a2422;
+  --color-ink-soft: #2b3533;
+  --color-muted: #56605e;
+  --color-green-950: #142824;
+  --color-green-900: #1e3834;
+  --color-green-800: #2c4f4a;
+  --color-green-700: #3a635d;
+  --color-green-600: #4a776f;
+  --color-green-500: #5e8a82;
+  --color-green-400: #86aaa3;
+  --color-gold: #d4af37;
+  --color-gold-light: #e6c766;
+  --color-gold-soft: #f5eccf;
+  --color-gold-ink: #8a6a16;
+  --color-mist: #f4f2ec;
+  --color-paper: #fafafa;
+  --color-line: #e6e3da;
 
   --font-sans: var(--font-inter), ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
   --font-display: var(--font-montserrat), var(--font-inter), ui-sans-serif, system-ui, sans-serif;
 
-  --shadow-soft: 0 1px 2px rgb(14 26 28 / 0.04), 0 10px 30px -10px rgb(15 61 58 / 0.14);
-  --shadow-lift: 0 2px 6px rgb(14 26 28 / 0.05), 0 24px 48px -16px rgb(15 61 58 / 0.28);
+  --shadow-soft: 0 1px 2px rgb(26 36 34 / 0.04), 0 10px 30px -10px rgb(44 79 74 / 0.16);
+  --shadow-lift: 0 2px 6px rgb(26 36 34 / 0.05), 0 24px 48px -16px rgb(44 79 74 / 0.3);
 
   /* Movimiento */
   --animate-float: float 7s ease-in-out infinite;
@@ -89,16 +88,16 @@
     text-rendering: optimizeLegibility;
   }
   ::selection {
-    background: var(--color-mint);
+    background: var(--color-gold-soft);
     color: var(--color-ink);
   }
   :focus-visible {
-    outline: 2px solid var(--color-teal-600);
+    outline: 2px solid var(--color-green-700);
     outline-offset: 3px;
     border-radius: 6px;
   }
   .on-dark :focus-visible {
-    outline-color: var(--color-mint);
+    outline-color: var(--color-gold-light);
   }
 }
 
@@ -125,22 +124,22 @@
   }
 }
 
-/* Fondo menta luminoso del hero (mockup Amplía) */
+/* Fondo editorial del hero: #FAFAFA con resplandores verde y dorado muy sutiles */
 @utility bg-hero-light {
   background:
-    radial-gradient(48rem 32rem at 82% 30%, rgb(168 224 214 / 0.55), transparent 65%),
-    radial-gradient(40rem 28rem at 5% 0%, rgb(231 245 242 / 1), transparent 70%),
-    linear-gradient(180deg, #eaf6f3 0%, #f6fbfa 60%, #ffffff 100%);
+    radial-gradient(46rem 30rem at 82% 28%, rgb(212 175 55 / 0.14), transparent 65%),
+    radial-gradient(40rem 28rem at 5% 0%, rgb(44 79 74 / 0.08), transparent 70%),
+    linear-gradient(180deg, #f4f2ec 0%, #fafafa 70%);
 }
 
-/* Gradiente de marca para tarjetas y bandas (teal → petróleo) */
+/* Gradiente de marca para tarjetas y bandas (verde → verde profundo) */
 @utility bg-brand {
-  background: linear-gradient(135deg, var(--color-teal-600) 0%, var(--color-teal-800) 55%, var(--color-ocean) 100%);
+  background: linear-gradient(135deg, var(--color-green-700) 0%, var(--color-green-800) 50%, var(--color-green-900) 100%);
 }
 
 /* Texto con el gradiente de marca en movimiento */
 @utility text-brand-animated {
-  background-image: linear-gradient(110deg, var(--color-teal-600), var(--color-ocean), var(--color-teal-500), var(--color-teal-800));
+  background-image: linear-gradient(110deg, var(--color-green-800), var(--color-gold-ink), var(--color-green-700), var(--color-green-900));
   background-size: 250% 100%;
   -webkit-background-clip: text;
   background-clip: text;
@@ -150,7 +149,7 @@
 
 /* Patrón hexagonal sutil (mockup Amplía) */
 @utility bg-hex {
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='56' height='98' viewBox='0 0 56 98'%3E%3Cpath d='M28 66L0 50V17L28 1l28 16v33L28 66zm0 32L0 82V66l28 16 28-16v16L28 98z' fill='none' stroke='%231f7c75' stroke-opacity='0.08'/%3E%3C/svg%3E");
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='56' height='98' viewBox='0 0 56 98'%3E%3Cpath d='M28 66L0 50V17L28 1l28 16v33L28 66zm0 32L0 82V66l28 16 28-16v16L28 98z' fill='none' stroke='%232c4f4a' stroke-opacity='0.06'/%3E%3C/svg%3E");
 }
 
 @utility photo-duotone {
@@ -179,6 +178,39 @@
   animation-delay: 0.7s;
 }
 
+/* Mapa de Colaboraciones: pines que caen y pulso en algunos */
+@media (prefers-reduced-motion: no-preference) {
+  .js .sonora-map .map-pin {
+    opacity: 0;
+    transform: translateY(-16px);
+    transition:
+      opacity 0.35s ease-out,
+      transform 0.7s cubic-bezier(0.34, 1.56, 0.64, 1);
+  }
+  .js .sonora-map.is-in .map-pin {
+    opacity: 1;
+    transform: none;
+  }
+  .sonora-map.is-in .map-pin:nth-child(3n + 4) .map-pin-pulse {
+    animation: pin-pulse 2.6s ease-out infinite;
+  }
+}
+.map-pin-pulse {
+  opacity: 0;
+  transform-box: fill-box;
+  transform-origin: center;
+}
+@keyframes pin-pulse {
+  0% {
+    opacity: 0.55;
+    transform: scale(0.3);
+  }
+  100% {
+    opacity: 0;
+    transform: scale(1.8);
+  }
+}
+
 /* Marquee: la copia duplicada solo existe para el bucle visual */
 .marquee:hover .marquee-track {
   animation-play-state: paused;
@@ -186,7 +218,7 @@
 
 /* Brillo diagonal en hover */
 .shine {
-  background: linear-gradient(105deg, transparent 35%, rgb(255 255 255 / 0.22) 50%, transparent 65%);
+  background: linear-gradient(105deg, transparent 35%, rgb(230 199 102 / 0.22) 50%, transparent 65%);
   transform: translateX(-120%);
   transition: transform 0.9s cubic-bezier(0.22, 1, 0.36, 1);
 }

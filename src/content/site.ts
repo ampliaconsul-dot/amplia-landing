@@ -34,6 +34,7 @@ export const site = {
 export const nav = [
   { label: "Servicios", href: "#servicios" },
   { label: "Metodología", href: "#metodologia" },
+  { label: "Colaboraciones", href: "#colaboraciones" },
   { label: "Nosotros", href: "#nosotros" },
   { label: "Contacto", href: "#contacto" },
 ] as const;
@@ -136,21 +137,25 @@ export const methodology = {
   steps: [
     {
       title: "Planeación",
+      short: "Diagnóstico y estrategia de cumplimiento.",
       description:
         "Diagnóstico, diseño de estrategias y definición de metas de cumplimiento vinculadas con la transparencia y la normatividad.",
     },
     {
       title: "Implementación",
+      short: "Ejecución técnica con acompañamiento directo.",
       description:
         "Ejecución técnica de los procedimientos y acompañamiento directo, atendiendo las responsabilidades administrativas y legales.",
     },
     {
       title: "Seguimiento",
+      short: "Evaluación y mejora continua de cada proceso.",
       description:
         "Evaluación, observación y mejora continua de los procesos de entrega-recepción, auditorías y rendición de cuentas.",
     },
     {
       title: "Transparencia",
+      short: "Rendición de cuentas clara ante la ciudadanía.",
       description:
         "Publicación y actualización de la información para que el municipio rinda cuentas con certeza ante la ciudadanía.",
     },
@@ -213,4 +218,13 @@ export const contactSection = {
   title: "Hablemos de tu administración",
   subtitle:
     "Cuéntanos qué necesita tu Ayuntamiento. Te responderemos en un máximo de un día hábil.",
+};
+
+export const collaborations = {
+  eyebrow: "Colaboraciones",
+  title: "Presencia en todo Sonora",
+  percent: 36.1,
+  served: 26,
+  total: 72,
+  text: "Actualmente, 36 % de los municipios sonorenses han recibido acompañamiento técnico de Amplía Consultoría, con resultados visibles en transparencia, rendición de cuentas y eficiencia administrativa.",
 };

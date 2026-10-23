@@ -10,7 +10,7 @@ export function CtaBand() {
         <div className="bg-brand on-dark relative overflow-hidden rounded-[2rem] px-7 py-14 text-white shadow-lift md:px-16 md:py-16">
           <span
             aria-hidden
-            className="animate-drift pointer-events-none absolute -top-1/2 -right-1/4 size-[36rem] rounded-full bg-teal-400/25 blur-3xl"
+            className="animate-drift pointer-events-none absolute -top-1/2 -right-1/4 size-[36rem] rounded-full bg-green-400/25 blur-3xl"
           />
           <BrushRing
             id="cta"

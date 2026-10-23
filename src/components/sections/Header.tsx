@@ -65,13 +65,13 @@ export function Header() {
       >
         <Logo id="header-logo" />
 
-        <nav aria-label="Principal" className="hidden md:block">
+        <nav aria-label="Principal" className="hidden lg:block">
           <ul className="flex items-center gap-1">
             {nav.map((item) => (
               <li key={item.href}>
                 <a
                   href={item.href}
-                  className="rounded-full px-4 py-2 font-display text-sm font-semibold text-ink-soft transition-colors hover:bg-mint-soft hover:text-teal-800"
+                  className="rounded-full px-4 py-2 font-display text-sm font-semibold text-ink-soft transition-colors hover:bg-gold-soft hover:text-green-800"
                 >
                   {item.label}
                 </a>
@@ -80,13 +80,13 @@ export function Header() {
           </ul>
         </nav>
 
-        <div className="hidden md:block">
+        <div className="hidden lg:block">
           <ButtonLink href={hero.primaryCta.href}>{hero.primaryCta.label}</ButtonLink>
         </div>
 
         <button
           type="button"
-          className="inline-flex size-11 items-center justify-center rounded-full text-ink hover:bg-mint-soft md:hidden"
+          className="inline-flex size-11 items-center justify-center rounded-full text-ink hover:bg-gold-soft lg:hidden"
           aria-expanded={open}
           aria-controls="menu-movil"
           aria-label={open ? "Cerrar menú" : "Abrir menú"}
@@ -96,7 +96,7 @@ export function Header() {
         </button>
       </div>
 
-      <div id="menu-movil" hidden={!open} className="h-[calc(100dvh-4.5rem)] border-t border-line bg-white md:hidden">
+      <div id="menu-movil" hidden={!open} className="h-[calc(100dvh-4.5rem)] border-t border-line bg-white lg:hidden">
         <nav aria-label="Móvil" className="container-page flex flex-col gap-2 py-8">
           {nav.map((item) => (
             <a

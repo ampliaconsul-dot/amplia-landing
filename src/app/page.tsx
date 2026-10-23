@@ -4,6 +4,7 @@ import { TrustBar } from "@/components/sections/TrustBar";
 import { Services } from "@/components/sections/Services";
 import { Benefits } from "@/components/sections/Benefits";
 import { Methodology } from "@/components/sections/Methodology";
+import { Collaborations } from "@/components/sections/Collaborations";
 import { About } from "@/components/sections/About";
 import { Difference } from "@/components/sections/Difference";
 import { CtaBand } from "@/components/sections/CtaBand";
@@ -20,6 +21,7 @@ export default function Home() {
         <Services />
         <Benefits />
         <Methodology />
+        <Collaborations />
         <About />
         <Difference />
         <CtaBand />

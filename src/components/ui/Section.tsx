@@ -52,7 +52,7 @@ export function SectionHeading({
     <div className={`flex max-w-2xl flex-col gap-4 ${alignCls}`}>
       {eyebrow && (
         <p
-          className={`font-display text-xs font-bold tracking-[0.2em] uppercase ${dark ? "text-mint" : "text-teal-600"}`}
+          className={`font-display text-xs font-bold tracking-[0.2em] uppercase ${dark ? "text-gold-light" : "text-gold-ink"}`}
         >
           {eyebrow}
         </p>
@@ -64,7 +64,7 @@ export function SectionHeading({
         {title}
       </h2>
       {align === "center" && (
-        <span aria-hidden className={`h-1 w-12 rounded-full ${dark ? "bg-mint" : "bg-brand"}`} />
+        <span aria-hidden className={`h-1 w-12 rounded-full bg-gold`} />
       )}
       {subtitle && (
         <p className={`text-base leading-relaxed text-pretty md:text-lg ${dark ? "text-white/85" : "text-muted"}`}>

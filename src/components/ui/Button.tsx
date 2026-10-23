@@ -8,10 +8,11 @@ const base =
   "group inline-flex items-center justify-center gap-2 rounded-full font-display font-semibold tracking-tight transition-all duration-200 ease-out disabled:pointer-events-none disabled:opacity-60 active:scale-[0.98]";
 
 const variants: Record<Variant, string> = {
-  primary: "bg-brand text-white shadow-soft hover:shadow-lift hover:-translate-y-0.5 hover:brightness-110",
+  primary:
+    "bg-brand text-white shadow-soft ring-1 ring-transparent hover:shadow-lift hover:-translate-y-0.5 hover:ring-gold hover:brightness-110",
   secondary:
-    "border border-teal-700/30 bg-white/70 text-teal-800 backdrop-blur hover:border-teal-600 hover:bg-white hover:-translate-y-0.5",
-  light: "bg-white text-teal-900 shadow-soft hover:bg-mint-soft hover:-translate-y-0.5",
+    "border border-green-700/30 bg-white/70 text-green-800 backdrop-blur hover:border-green-600 hover:bg-white hover:-translate-y-0.5",
+  light: "bg-white text-green-900 shadow-soft ring-1 ring-transparent hover:bg-gold-soft hover:ring-gold hover:-translate-y-0.5",
   "ghost-light": "border border-white/40 text-white hover:border-white hover:bg-white/10 hover:-translate-y-0.5",
 };
 

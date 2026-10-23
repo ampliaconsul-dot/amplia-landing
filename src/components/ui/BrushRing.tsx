@@ -1,5 +1,5 @@
 /**
- * Anillo de pincelada teal — el isotipo de Amplía, recreado en SVG
+ * Anillo de pincelada verde con destello dorado — el isotipo de Amplía, recreado en SVG
  * (ligero, escalable y sin depender de imágenes raster).
  */
 export function BrushRing({
@@ -19,7 +19,7 @@ export function BrushRing({
   const filterId = `brush-${id}`;
   const gradId = `brush-grad-${id}`;
   const stops =
-    tone === "deep" ? ["#5cbfb1", "#1f7c75", "#0f3d3a"] : ["#ffffff", "#a8e0d6", "#3fa79b"];
+    tone === "deep" ? ["#d4af37", "#4a776f", "#1e3834"] : ["#ffffff", "#e6c766", "#d4af37"];
   return (
     <svg
       viewBox="0 0 400 400"

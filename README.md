@@ -23,8 +23,8 @@ npm run dev                  # http://localhost:3000
 ## Dónde editar
 
 - **Textos, servicios, datos de contacto:** `src/content/site.ts` (un solo archivo). Los valores con `TODO` son marcadores: reemplázalos antes de publicar.
-- **Fotos:** `public/images/` (`fabiola-kitazawa.webp`, `equipo-amplia.webp`). Para usar los originales en alta resolución, reemplaza el archivo con el mismo nombre.
-- **Colores y tipografía:** tokens en `src/app/globals.css` (`@theme`). Fuentes auto-alojadas en `src/fonts/` (Montserrat + Inter, licencia OFL).
+- **Colaboraciones:** cifras en `collaborations` (`src/content/site.ts`); silueta y pines del mapa en `src/content/sonora-map.ts`.
+- **Colores y tipografía:** tokens en `src/app/globals.css` (`@theme`). Paleta Premium Editorial (#FAFAFA, verde #2C4F4A, dorado #D4AF37). Fuentes auto-alojadas en `src/fonts/` (Montserrat + Inter, licencia OFL).
 
 ## Estructura
 

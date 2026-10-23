@@ -19,11 +19,11 @@ export function About() {
           <div className="relative aspect-square">
             <BrushRing id="about" animated strokeWidth={26} className="absolute inset-0 h-full w-full" />
             <blockquote className="absolute inset-[16%] flex flex-col items-center justify-center gap-3 rounded-full bg-white p-8 text-center shadow-lift">
-              <Quote className="size-6 text-teal-600" aria-hidden />
+              <Quote className="size-6 text-gold" aria-hidden />
               <p className="font-display text-sm leading-snug font-semibold text-ink sm:text-base">
                 “{about.leaderQuote}”
               </p>
-              <footer className="text-xs font-semibold tracking-[0.16em] text-teal-700 uppercase">Amplía Consultoría</footer>
+              <footer className="text-xs font-semibold tracking-[0.16em] text-green-700 uppercase">Amplía Consultoría</footer>
             </blockquote>
           </div>
           <ul aria-label="Nuestros principios">
@@ -59,9 +59,9 @@ export function About() {
                 key={item.term}
                 variant="right"
                 delay={0.2 + i * 0.12}
-                className="rounded-3xl border-l-4 border-teal-600 bg-white p-6 shadow-soft"
+                className="rounded-3xl border-l-4 border-green-600 bg-white p-6 shadow-soft"
               >
-                <dt className="mb-2 font-display text-xs font-bold tracking-[0.2em] text-teal-700 uppercase">
+                <dt className="mb-2 font-display text-xs font-bold tracking-[0.2em] text-green-700 uppercase">
                   {item.term}
                 </dt>
                 <dd className="text-[0.95rem] leading-relaxed text-ink-soft">{item.text}</dd>

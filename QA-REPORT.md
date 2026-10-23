@@ -7,7 +7,7 @@ Fecha: 2026-10-22 · Build de producción (`next build` + `next start`) · Chrom
 | Área | Resultado |
 | --- | --- |
 | Build / TypeScript / ESLint | ✅ Sin errores ni advertencias |
-| QA automatizado (`qa/qa.mjs`) | ✅ **31/31** verificaciones (incluye `prefers-reduced-motion`) |
+| QA automatizado (`qa/qa.mjs`) | ✅ **37/37** verificaciones (incluye `prefers-reduced-motion`, ciclo de consultoría, dona y mapa) |
 | Lighthouse móvil | Rendimiento **96–97** · Accesibilidad **100** · Buenas prácticas **100** · SEO **100** |
 | Lighthouse escritorio | Rendimiento **100** (LCP 0.6 s) |
 | `npm audit --omit=dev` | ✅ 0 vulnerabilidades |
@@ -54,5 +54,5 @@ Métricas móviles (Lighthouse, 4G simulado): FCP 0.9 s · LCP 2.6 s · TBT 110 
 
 ## Pendientes de contenido
 1. Confirmar dirección y horario en `src/content/site.ts` (correo ampliaconsul@gmail.com y teléfono/WhatsApp 662 205 5021 ya actualizados).
-2. Foto del equipo en alta resolución: la actual se recortó de la presentación (calidad limitada). Basta con reemplazar `public/images/equipo-amplia.webp`. La foto de la Lic. Fabiola se retiró del sitio a petición.
+2. El sitio ya no usa fotografías (se retiraron a petición); la portada muestra el ciclo de consultoría animado y la sección Colaboraciones usa un mapa SVG de Sonora (@svg-maps/mexico, CC BY 4.0).
 3. Revisión legal del aviso de privacidad simplificado (footer) y, si aplica, enlace al aviso integral.

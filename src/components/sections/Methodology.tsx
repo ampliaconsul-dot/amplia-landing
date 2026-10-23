@@ -31,7 +31,7 @@ export function Methodology() {
               <div className="group relative flex h-full flex-col items-start gap-3 overflow-hidden rounded-3xl bg-white p-7 shadow-soft ring-1 ring-line transition-all duration-300 hover:-translate-y-1.5 hover:shadow-lift">
                 <span
                   aria-hidden
-                  className="bg-brand relative inline-flex size-12 items-center justify-center rounded-full font-display text-xl font-extrabold text-white shadow-soft ring-4 ring-white transition-transform duration-300 group-hover:scale-110"
+                  className="relative inline-flex size-12 items-center justify-center rounded-full bg-green-800 font-display text-xl font-extrabold text-gold-light shadow-soft ring-4 ring-white transition-transform duration-300 group-hover:scale-110"
                 >
                   {i + 1}
                 </span>

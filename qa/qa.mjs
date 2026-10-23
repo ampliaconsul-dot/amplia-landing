@@ -106,6 +106,30 @@ for (const path of ["/robots.txt", "/sitemap.xml", "/opengraph-image"]) {
   check(`GET ${path} → 200`, r.status() === 200, String(r.status()));
 }
 
+// 2b. Secciones animadas: ciclo de consultoría, dona y mapa
+const cycle = page.getByRole("group", { name: "Ciclo de consultoría Amplía" });
+check("Ciclo de consultoría presente con 4 etapas", (await cycle.getByRole("button").count()) === 4);
+// Al pasar el cursor por el ciclo la órbita se detiene (así también un usuario puede hacer clic con calma)
+await cycle.scrollIntoViewIfNeeded();
+await cycle.hover();
+await cycle.getByRole("button", { name: "Etapa 3: Seguimiento" }).click();
+check(
+  "Ciclo: clic en una etapa la activa",
+  (await cycle.getByRole("button", { name: "Etapa 3: Seguimiento" }).getAttribute("aria-pressed")) === "true",
+);
+await page.mouse.move(0, 0);
+const before = await cycle.locator('[aria-pressed="true"]').getAttribute("aria-label");
+await page.waitForTimeout(3900);
+const after = await cycle.locator('[aria-pressed="true"]').getAttribute("aria-label");
+check("Ciclo: avanza solo", before !== after, `${before} → ${after}`);
+check(
+  "Dona con descripción accesible",
+  (await page.getByRole("img", { name: /36\.1 % de los municipios de Sonora \(26 de 72\)/ }).count()) === 1,
+);
+check("Mapa de Sonora con 26 pines", (await page.locator(".sonora-map .map-pin").count()) === 26);
+const people = await page.evaluate(() => document.querySelectorAll("img").length);
+check("Sin fotografías de personas (0 <img>)", people === 0, `${people} img`);
+
 // 3. Teclado: primer Tab muestra "Saltar al contenido"
 await page.goto(BASE, { waitUntil: "networkidle" });
 await page.keyboard.press("Tab");

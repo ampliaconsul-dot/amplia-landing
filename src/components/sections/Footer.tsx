@@ -4,7 +4,7 @@ import { nav, site } from "@/content/site";
 export function Footer() {
   const year = new Date().getFullYear();
   return (
-    <footer className="border-t border-line bg-[#e9eeee] text-ink">
+    <footer className="border-t border-line bg-mist text-ink">
       <div className="container-page grid gap-12 py-16 md:grid-cols-[1.4fr_1fr_1fr]">
         <div className="flex flex-col gap-5">
           <Logo id="footer-logo" />
@@ -14,11 +14,11 @@ export function Footer() {
           </p>
         </div>
         <nav aria-label="Pie de página">
-          <h2 className="mb-4 font-display text-xs font-bold tracking-[0.2em] text-teal-700 uppercase">Navegación</h2>
+          <h2 className="mb-4 font-display text-xs font-bold tracking-[0.2em] text-green-700 uppercase">Navegación</h2>
           <ul className="flex flex-col gap-2.5">
             {nav.map((item) => (
               <li key={item.href}>
-                <a href={item.href} className="text-sm text-ink-soft transition-colors hover:text-teal-700">
+                <a href={item.href} className="text-sm text-ink-soft transition-colors hover:text-green-700">
                   {item.label}
                 </a>
               </li>
@@ -26,15 +26,15 @@ export function Footer() {
           </ul>
         </nav>
         <div>
-          <h2 className="mb-4 font-display text-xs font-bold tracking-[0.2em] text-teal-700 uppercase">Contacto</h2>
+          <h2 className="mb-4 font-display text-xs font-bold tracking-[0.2em] text-green-700 uppercase">Contacto</h2>
           <ul className="flex flex-col gap-2.5 text-sm text-ink-soft">
             <li>
-              <a href={`mailto:${site.contact.email}`} className="transition-colors hover:text-teal-700">
+              <a href={`mailto:${site.contact.email}`} className="transition-colors hover:text-green-700">
                 {site.contact.email}
               </a>
             </li>
             <li>
-              <a href={site.contact.phoneHref} className="transition-colors hover:text-teal-700">
+              <a href={site.contact.phoneHref} className="transition-colors hover:text-green-700">
                 {site.contact.phone}
               </a>
             </li>

@@ -17,7 +17,7 @@ export function Contact() {
     <section id="contacto" aria-labelledby="contacto-title" className="bg-brand on-dark relative overflow-hidden py-20 text-white md:py-28">
       <span
         aria-hidden
-        className="animate-drift pointer-events-none absolute -right-40 -bottom-40 size-[40rem] rounded-full bg-teal-400/20 blur-3xl"
+        className="animate-drift pointer-events-none absolute -right-40 -bottom-40 size-[40rem] rounded-full bg-green-400/20 blur-3xl"
       />
       <BrushRing
         id="contact"
@@ -43,7 +43,7 @@ export function Contact() {
                   <Icon className="size-5" strokeWidth={1.8} aria-hidden />
                 </span>
                 <div className="flex flex-col">
-                  <span className="font-display text-xs font-bold tracking-[0.14em] text-mint uppercase">{label}</span>
+                  <span className="font-display text-xs font-bold tracking-[0.14em] text-gold-light uppercase">{label}</span>
                   {href ? (
                     <a
                       href={href}
